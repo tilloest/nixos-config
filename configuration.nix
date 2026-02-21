@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./spicetify.nix
   ];
 
   # --- Bootloader & Kernel ---
@@ -120,7 +121,6 @@
     vscode
     winetricks
     protontricks
-    spotify
     qalculate-qt
     protonplus
     pinta

@@ -9,21 +9,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, ... }: {
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, spicetify-nix, ... } @ inputs: {
     nixosConfigurations.sofia = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
         nixos-hardware.nixosModules.lenovo-legion-15arh05h
         home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            #users.tillo = import ./home.nix;
-            backupFileExtension = "backup";
-          };
-        }
+        spicetify-nix.nixosModules.spicetify
       ];
     };
   };
