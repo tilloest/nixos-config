@@ -27,6 +27,5 @@
     lutris
     heroic
     czkawka
-    obsidian
   ];
 }
