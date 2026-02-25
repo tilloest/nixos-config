@@ -27,6 +27,7 @@
     ./modules/programs/packages.nix
     ./modules/programs/gaming.nix
     ./modules/programs/git.nix
+    ./modules/programs/shell.nix
     ./modules/programs/spicetify.nix
 
     # Services
