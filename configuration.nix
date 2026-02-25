@@ -10,6 +10,7 @@
     ./modules/core/locale.nix
     ./modules/core/nix.nix
     ./modules/core/users.nix
+    ./modules/core/home-manager.nix
 
     # Hardware
     ./modules/hardware/nvidia.nix
@@ -25,9 +26,7 @@
     # Programs
     ./modules/programs/packages.nix
     ./modules/programs/gaming.nix
-    ./modules/programs/vscode.nix
     ./modules/programs/git.nix
-    ./modules/programs/shell.nix
     ./modules/programs/spicetify.nix
 
     # Services
