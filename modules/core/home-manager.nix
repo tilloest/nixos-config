@@ -4,6 +4,6 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.tillo = import ../../home.nix;
+    users.tillo = import ../../home/default.nix;
   };
 }
