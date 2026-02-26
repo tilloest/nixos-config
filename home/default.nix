@@ -6,7 +6,6 @@
     ./git.nix
     ./vscode.nix
     ./packages.nix
-    ./programming.nix
   ];
 
   home.username = "tillo";

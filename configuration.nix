@@ -29,6 +29,7 @@
     ./modules/programs/git.nix
     ./modules/programs/shell.nix
     ./modules/programs/spicetify.nix
+    ./modules/programs/programming.nix
 
     # Services
     ./modules/services/flatpak.nix

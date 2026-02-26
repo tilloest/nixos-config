@@ -1,28 +1,32 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
 
     ##################################################
-    # Core Build Toolchain (shared dependencies)
+    # Core Toolchain
     ##################################################
 
-    gcc
     clang
+    clang-tools
     gnumake
     cmake
     ninja
     pkg-config
     gdb
     lldb
+    cppcheck
 
-    # Common native deps many projects need
+    ##################################################
+    # Native Libraries
+    ##################################################
+
     openssl
     zlib
     libffi
 
     ##################################################
-    # Python Development
+    # Python
     ##################################################
 
     (python312.withPackages (ps: with ps; [
@@ -30,41 +34,24 @@
       virtualenv
       setuptools
       wheel
-
-      # Linting / Formatting / Typing
       black
       isort
       flake8
       mypy
-
-      # Debugging
       debugpy
     ]))
 
     ##################################################
-    # Rust Development
+    # Rust
     ##################################################
 
     rustc
     cargo
     rustfmt
     clippy
-
-    ##################################################
-    # C++ Extra Tooling
-    ##################################################
-
-    clang-tools        # clangd, clang-format
-    cppcheck           # static analysis
-
   ];
 
-  ##################################################
-  # Environment Variables for Native Builds
-  ##################################################
-
-  home.sessionVariables = {
+  environment.variables = {
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
   };
-
 }
