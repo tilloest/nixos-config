@@ -24,7 +24,6 @@
     obs-studio
     inkscape
     input-remapper
-    lutris
     heroic
     czkawka
   ];
