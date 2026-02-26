@@ -17,6 +17,11 @@
     lldb
     cppcheck
 
+    environment.enableAllTerminfo = false;
+    documentation.doc.enable = false;
+    documentation.info.enable = false;
+    documentation.man.enable = true;
+
     ##################################################
     # Native Libraries
     ##################################################
