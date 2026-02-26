@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -16,11 +16,6 @@
     gdb
     lldb
     cppcheck
-
-    environment.enableAllTerminfo = false;
-    documentation.doc.enable = false;
-    documentation.info.enable = false;
-    documentation.man.enable = true;
 
     ##################################################
     # Native Libraries
@@ -55,6 +50,8 @@
     rustfmt
     clippy
   ];
+
+  nixpkgs.config.python.withDocs = false;
 
   environment.variables = {
     PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
