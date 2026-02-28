@@ -15,9 +15,26 @@
       "context.properties" = {
         "default.clock.rate" = 48000;
         "default.clock.quantum" = 1024;
-        "default.clock.min-quantum" = 128;
+        "default.clock.min-quantum" = 512;
         "default.clock.max-quantum" = 2048;
       };
+    };
+
+    wireplumber.extraConfig."51-disable-dualsense-audio" = {
+      "monitor.alsa.rules" = [
+        {
+          matches = [
+            {
+              "device.name" = "alsa_input.usb-Sony_Interactive_Entertainment_DualSense_Wireless_Controller*";
+            }
+          ];
+          actions = {
+            update-props = {
+              "device.disabled" = true;
+            };
+          };
+        }
+      ];
     };
   };
 }
