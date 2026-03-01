@@ -16,7 +16,7 @@ in
       lookAndFeel = "org.kde.breeze.desktop";
     };
 
-  file."kickoffrc" = {
+    file."kickoffrc" = {
       "General" = {
         "hiddenApplications" = hiddenAppsString;
       };
