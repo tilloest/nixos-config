@@ -2,6 +2,8 @@
 
 {
   imports = [
+    inputs.plasma-manager.homeModules.plasma-manager
+
     ./shell.nix
     ./git.nix
     ./vscode.nix

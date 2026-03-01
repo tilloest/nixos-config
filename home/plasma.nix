@@ -1,15 +1,13 @@
-{ inputs, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 let
   lspDesktopFiles = builtins.attrNames (builtins.readDir "${pkgs.lsp-plugins}/share/applications");
 
   lspHiddenList = builtins.filter (name: lib.hasPrefix "lsp-plugins" name) lspDesktopFiles;
+
+  hiddenAppsString = lib.concatStringsSep "," lspHiddenList;
 in
 {
-  imports = [
-    inputs.plasma-manager.homeManagerModules.plasma-manager
-  ];
-
   programs.plasma = {
     enable = true;
 
@@ -17,6 +15,11 @@ in
       clickItemTo = "select";
       lookAndFeel = "org.kde.breeze.desktop";
     };
-  kickoff.hiddenApplications = lspHiddenList;
+
+  file."kickoffrc" = {
+      "General" = {
+        "hiddenApplications" = hiddenAppsString;
+      };
+    };
   };
 }
