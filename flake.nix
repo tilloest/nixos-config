@@ -8,8 +8,13 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, spicetify-nix, ... } @ inputs: {
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, spicetify-nix, plasma-manager, ... } @ inputs: {
     nixosConfigurations.sofia = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
