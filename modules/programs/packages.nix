@@ -27,4 +27,6 @@
     heroic
     czkawka
   ];
+
+  programs.localsend.enable = true;
 }
