@@ -24,9 +24,8 @@
     obs-studio
     inkscape
     input-remapper
+    localsend
     heroic
     czkawka
   ];
-
-  programs.localsend.enable = true;
 }
