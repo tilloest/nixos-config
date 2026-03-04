@@ -13,7 +13,7 @@ in
 
     workspace = {
       clickItemTo = "select";
-      lookAndFeel = "org.kde.breeze.desktop";
+      lookAndFeel = "org.kde.breezedark.desktop";
     };
 
     file."kickoffrc" = {
