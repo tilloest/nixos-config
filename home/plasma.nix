@@ -14,6 +14,9 @@ in
     workspace = {
       clickItemTo = "select";
       lookAndFeel = "org.kde.breezedark.desktop";
+      cursor = {
+        theme = "Bibata-Modern-Classic";
+      };
     };
 
     session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
