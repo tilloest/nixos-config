@@ -16,6 +16,8 @@ in
       lookAndFeel = "org.kde.breezedark.desktop";
     };
 
+    session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
+
     file."kickoffrc" = {
       "General" = {
         "hiddenApplications" = hiddenAppsString;
