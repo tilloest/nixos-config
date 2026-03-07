@@ -21,7 +21,6 @@
     protonplus
     pinta
     parabolic
-    obs-studio
     inkscape
     input-remapper
     localsend

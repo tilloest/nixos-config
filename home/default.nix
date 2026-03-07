@@ -9,6 +9,7 @@
     ./vscode.nix
     ./packages.nix
     ./plasma.nix
+    ./obs-studio.nix
   ];
 
   home.username = "tillo";
