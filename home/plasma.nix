@@ -19,10 +19,17 @@ in
       };
     };
 
+    shortcuts = {
+      "com.mitchellh.ghostty.desktop" = {
+        "_launch" = "Meta+Return";
+      };
+    };
+
     session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
 
-    file."kickoffrc" = {
+    configFile."kickoffrc" = {
       "General" = {
+        "icon" = "nix-snowflake-white";
         "hiddenApplications" = hiddenAppsString;
       };
     };
