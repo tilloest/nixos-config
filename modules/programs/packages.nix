@@ -26,5 +26,6 @@
     localsend
     heroic
     czkawka
+    flameshot
   ];
 }
