@@ -12,10 +12,18 @@
       };
     };
 
+    input.keyboard = {
+      numlockOnStartup = "on";
+    };
+
     shortcuts = {
       "com.mitchellh.ghostty.desktop" = {
         "_launch" = "Meta+Return";
       };
+    };
+
+    krunner = {
+      position = "center";
     };
 
     session.sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
