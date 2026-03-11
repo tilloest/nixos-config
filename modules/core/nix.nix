@@ -17,5 +17,13 @@
     flake = "/etc/nixos";
   };
 
-  programs.nix-ld.enable = true;
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      qt6.qtbase
+      qt6.qtdeclarative
+      qt6.qttools
+      libGLX
+    ];
+  };
 }
