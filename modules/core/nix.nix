@@ -24,6 +24,7 @@
       qt6.qtdeclarative
       qt6.qttools
       libGLX
+      vulkan-loader
     ];
   };
 }
