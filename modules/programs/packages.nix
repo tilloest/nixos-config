@@ -27,5 +27,6 @@
     heroic
     czkawka
     vulkan-tools
+    vulkan-loader
   ];
 }
