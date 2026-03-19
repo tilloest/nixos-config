@@ -28,5 +28,6 @@
     czkawka
     vulkan-tools
     vulkan-loader
+    vulkan-headers
   ];
 }
