@@ -2,11 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-
-    ##################################################
-    # Core Toolchain
-    ##################################################
-
     clang
     clang-tools
     gnumake
@@ -17,17 +12,10 @@
     lldb
     cppcheck
 
-    ##################################################
-    # Native Libraries
-    ##################################################
-
     openssl
     zlib
     libffi
 
-    ##################################################
-    # Python
-    ##################################################
 
     (python3.withPackages (ps: with ps; [
       pip          # Package installer
@@ -39,14 +27,12 @@
       ipython      # Better interactive shell
     ]))
 
-    ##################################################
-    # Rust
-    ##################################################
-
     rustc
     cargo
     rustfmt
     clippy
+
+    helix
   ];
 
   environment.variables = {
