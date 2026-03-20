@@ -29,5 +29,7 @@
     vulkan-tools
     vulkan-loader
     vulkan-headers
+    lsfg-vk
+    lsfg-vk-ui
   ];
 }
