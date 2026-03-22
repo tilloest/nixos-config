@@ -3,7 +3,14 @@
 {
     programs.vscode = {
         enable = true;
-        package = pkgs.vscode.fhs;
+        package = pkgs.vscode.fhsWithPackages (ps: with ps; [
+            gcc
+            gdb
+            gnumake
+            cmake
+            binutils
+            zlib
+        ]);
 
         extensions = with pkgs.vscode-extensions; [
             jnoortheen.nix-ide
