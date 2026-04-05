@@ -30,6 +30,7 @@
     ./modules/programs/shell.nix
     ./modules/programs/spicetify.nix
     ./modules/programs/programming.nix
+    ./modules/programs/virtualization.nix
 
     # Services
     ./modules/services/flatpak.nix
