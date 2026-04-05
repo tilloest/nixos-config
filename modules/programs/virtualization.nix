@@ -6,4 +6,5 @@
     users.users.tillo.extraGroups = [ "libvirtd" ];
     virtualisation.libvirtd.enable = true;
     virtualisation.spiceUSBRedirection.enable = true;
+    virtualisation.libvirtd.qemu.swtpm.enable = true;
 }
